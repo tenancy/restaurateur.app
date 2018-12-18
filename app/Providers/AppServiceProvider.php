@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\Restaurant;
 use Illuminate\Support\ServiceProvider;
+use Tenancy\Identification\Contracts\ResolvesTenants;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +15,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->app->resolving(ResolvesTenants::class, function (ResolvesTenants $resolver) {
+            $resolver->addModel(Restaurant::class);
+        });
     }
 
     /**
