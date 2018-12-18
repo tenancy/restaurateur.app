@@ -6,8 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
+use Symfony\Component\Console\Input\InputInterface;
 use Tenancy\Identification\Concerns\AllowsTenantIdentification;
 use Tenancy\Identification\Contracts\Tenant;
+use Tenancy\Identification\Drivers\Console\Contracts\IdentifiesByConsole;
 use Tenancy\Identification\Drivers\Http\Contracts\IdentifiesByHttp;
 
 /**
@@ -26,7 +28,7 @@ use Tenancy\Identification\Drivers\Http\Contracts\IdentifiesByHttp;
  * @property Carbon $updated_at
  * @property Carbon $deleted_at
  */
-class Restaurant extends Model implements Tenant, IdentifiesByHttp
+class Restaurant extends Model implements Tenant, IdentifiesByHttp, IdentifiesByConsole
 {
     use AllowsTenantIdentification;
 
@@ -49,5 +51,22 @@ class Restaurant extends Model implements Tenant, IdentifiesByHttp
                 return $query->orWhere('slug', $slug);
             })
             ->first();
+    }
+
+    /**
+     * Specify whether the tenant model is matching the request.
+     *
+     * @param InputInterface $input
+     * @return null|Tenant
+     */
+    public function tenantIdentificationByConsole(InputInterface $input): ?Tenant
+    {
+        if ($slug = $input->getArgument('tenant')) {
+            return $this->newQuery()
+                ->where('slug', $slug)
+                ->first();
+        }
+
+        return null;
     }
 }
