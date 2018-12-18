@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6278a5ca2f3e8b22b013aca2c4321bf3",
+    "content-hash": "ac1851cdaf76aa51a9e73a953a20a9d2",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -3007,185 +3007,70 @@
             "time": "2018-11-25T12:50:42+00:00"
         },
         {
-            "name": "tenancy/db-driver-mysql",
+            "name": "tenancy/framework",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/tenancy/db-driver-mysql.git",
-                "reference": "9c6774726cf5eeb545843d2a16c8fd7d64148c83"
+                "url": "https://github.com/tenancy/framework.git",
+                "reference": "1a6425310e9c2a6c04d77a78390ff05c0c5c369a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tenancy/db-driver-mysql/zipball/9c6774726cf5eeb545843d2a16c8fd7d64148c83",
-                "reference": "9c6774726cf5eeb545843d2a16c8fd7d64148c83",
-                "shasum": ""
-            },
-            "require": {
-                "tenancy/tenancy": "*"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Tenancy\\Database\\Drivers\\Mysql\\Providers\\DatabaseProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Tenancy\\Database\\Drivers\\Mysql\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Daniël Klabbers",
-                    "email": "daniel@klabbers.email",
-                    "homepage": "http://luceos.com"
-                }
-            ],
-            "description": "The tenancy/tenancy database driver for mysql",
-            "keywords": [
-                "database",
-                "mariadb",
-                "mysql",
-                "tenancy"
-            ],
-            "time": "2018-11-21T13:31:24+00:00"
-        },
-        {
-            "name": "tenancy/identification-driver-console",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tenancy/identification-driver-console.git",
-                "reference": "e7c42bf1c26f1f4bd378aef6c229d2da5cad590d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tenancy/identification-driver-console/zipball/e7c42bf1c26f1f4bd378aef6c229d2da5cad590d",
-                "reference": "e7c42bf1c26f1f4bd378aef6c229d2da5cad590d",
-                "shasum": ""
-            },
-            "require": {
-                "tenancy/tenancy": "*"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Tenancy\\Identification\\Drivers\\Console\\Providers\\IdentificationProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Tenancy\\Identification\\Drivers\\Console\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Daniël Klabbers",
-                    "email": "daniel@klabbers.email",
-                    "homepage": "http://luceos.com"
-                }
-            ],
-            "description": "The tenancy/tenancy identification driver for the console",
-            "keywords": [
-                "console",
-                "identification",
-                "tenancy"
-            ],
-            "time": "2018-11-19T14:43:36+00:00"
-        },
-        {
-            "name": "tenancy/identification-driver-http",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tenancy/identification-driver-http.git",
-                "reference": "73625eae78b6f250e9ee38a0a66f35be43101ee9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tenancy/identification-driver-http/zipball/73625eae78b6f250e9ee38a0a66f35be43101ee9",
-                "reference": "73625eae78b6f250e9ee38a0a66f35be43101ee9",
-                "shasum": ""
-            },
-            "require": {
-                "tenancy/tenancy": "*"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Tenancy\\Identification\\Drivers\\Http\\Providers\\IdentificationProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Tenancy\\Identification\\Drivers\\Http\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Daniël Klabbers",
-                    "email": "daniel@klabbers.email",
-                    "homepage": "http://luceos.com"
-                }
-            ],
-            "description": "The tenancy/tenancy identification driver for http",
-            "keywords": [
-                "http",
-                "identification",
-                "tenancy"
-            ],
-            "time": "2018-11-19T14:43:36+00:00"
-        },
-        {
-            "name": "tenancy/tenancy",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tenancy/tenancy.git",
-                "reference": "ef02376691bce73d3806a7cf052df1d43c0b9cd9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tenancy/tenancy/zipball/ef02376691bce73d3806a7cf052df1d43c0b9cd9",
-                "reference": "ef02376691bce73d3806a7cf052df1d43c0b9cd9",
+                "url": "https://api.github.com/repos/tenancy/framework/zipball/1a6425310e9c2a6c04d77a78390ff05c0c5c369a",
+                "reference": "1a6425310e9c2a6c04d77a78390ff05c0c5c369a",
                 "shasum": ""
             },
             "require": {
                 "laravel/framework": "5.7.*",
                 "psr/container": "^1.0.0"
             },
+            "replace": {
+                "tenancy/database-driver-mysql": "self.version",
+                "tenancy/database-driver-sqlite": "self.version",
+                "tenancy/identification-driver-console": "self.version",
+                "tenancy/identification-driver-environment": "self.version",
+                "tenancy/identification-driver-http": "self.version",
+                "tenancy/tenancy": "self.version"
+            },
+            "require-dev": {
+                "fzaninotto/faker": "^1.7",
+                "laravel/laravel": "5.7.*",
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^7.0",
+                "squizlabs/php_codesniffer": "^3.3",
+                "vimeo/psalm": "^2.0"
+            },
             "type": "library",
             "extra": {
                 "laravel": {
+                    "providers": [
+                        "Tenancy\\Providers\\TenancyProvider"
+                    ],
                     "aliases": {
-                        "Tenancy": "Tenancy\\Facades\\Tenancy"
+                        "Tenancy": "Tenancy\\Facades\\TenancyFacade"
                     }
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Tenancy\\": ""
+                    "Tenancy\\": "src/Tenancy",
+                    "Tenancy\\Database\\Drivers\\": "src/Database",
+                    "Tenancy\\Identification\\Drivers\\": "src/Identification"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Tenancy\\Testing\\": "src/Testing",
+                    "Tenancy\\Tests\\": "tests/unit/Tenancy",
+                    "Tenancy\\Tests\\Database\\Drivers\\": "tests/unit/Database",
+                    "Tenancy\\Tests\\Identification\\Drivers\\": "tests/unit/Identification"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -3205,7 +3090,10 @@
                 "saas",
                 "tenancy"
             ],
-            "time": "2018-11-21T13:30:59+00:00"
+            "support": {
+                "source": "https://github.com/tenancy/framework/tree/master"
+            },
+            "time": "2018-12-18T16:43:23+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -5133,33 +5021,12 @@
             "alias": "0.1",
             "alias_normalized": "0.1.0.0",
             "version": "9999999-dev",
-            "package": "tenancy/tenancy"
-        },
-        {
-            "alias": "0.1",
-            "alias_normalized": "0.1.0.0",
-            "version": "9999999-dev",
-            "package": "tenancy/db-driver-mysql"
-        },
-        {
-            "alias": "0.1",
-            "alias_normalized": "0.1.0.0",
-            "version": "9999999-dev",
-            "package": "tenancy/identification-driver-http"
-        },
-        {
-            "alias": "0.1",
-            "alias_normalized": "0.1.0.0",
-            "version": "9999999-dev",
-            "package": "tenancy/identification-driver-console"
+            "package": "tenancy/framework"
         }
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "tenancy/tenancy": 20,
-        "tenancy/db-driver-mysql": 20,
-        "tenancy/identification-driver-http": 20,
-        "tenancy/identification-driver-console": 20
+        "tenancy/framework": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
