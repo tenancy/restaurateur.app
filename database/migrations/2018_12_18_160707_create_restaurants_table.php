@@ -17,6 +17,9 @@ class CreateRestaurantsTable extends Migration
             $table->increments('id');
 
             $table->string('name');
+            // for (temporary) sub domains and easier identification
+            $table->string('slug');
+            $table->string('domain')->nullable();
             // allows removing a restaurant from public listing
             $table->boolean('is_online')->default(0);
             // allows marking a restaurant for payment arrears
