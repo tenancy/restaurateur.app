@@ -26,12 +26,9 @@ The must haves from the platform perspective:
 
 # Installation
 
-> Please note you need a valid Spark (Aurelius) license of your own to work with this project.
-
 ```bash
 composer install --prefer-dist --no-dev
 
-php artisan spark:install --team-billing --force
 php artisan migrate
 php artisan storage:link
 ```
