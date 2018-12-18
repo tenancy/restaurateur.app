@@ -30,8 +30,15 @@ class CreateRestaurantsTable extends Migration
             $table->string('phone')->nullable();
             $table->string('email')->nullable();
 
+            $table->integer('user_id')->unsigned();
+
             $table->timestamps();
             $table->softDeletes();
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
         });
     }
 
