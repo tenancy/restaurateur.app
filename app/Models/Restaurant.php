@@ -36,7 +36,7 @@ class Restaurant extends Model implements Tenant, IdentifiesByHttp, IdentifiesBy
      * Specify whether the tenant model is matching the request.
      *
      * @param Request $request
-     * @return Tenant
+     * @return null|Tenant
      */
     public function tenantIdentificationByHttp(Request $request): ?Tenant
     {
