@@ -40,6 +40,10 @@ class Restaurant extends Model implements Tenant, IdentifiesByHttp, IdentifiesBy
      */
     public function tenantIdentificationByHttp(Request $request): ?Tenant
     {
+        if (app()->runningInConsole()) {
+            return null;
+        }
+
         $host = $request->getHost();
         $appHost = parse_url(config('app.url'), PHP_URL_HOST);
 
@@ -61,7 +65,7 @@ class Restaurant extends Model implements Tenant, IdentifiesByHttp, IdentifiesBy
      */
     public function tenantIdentificationByConsole(InputInterface $input): ?Tenant
     {
-        if ($slug = $input->getArgument('tenant')) {
+        if ($input->hasArgument('tenant') && $slug = $input->getArgument('tenant')) {
             return $this->newQuery()
                 ->where('slug', $slug)
                 ->first();
