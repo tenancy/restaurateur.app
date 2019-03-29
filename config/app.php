@@ -171,10 +171,6 @@ return [
         Tenancy\Providers\TenancyProvider::class,
 
         /*
-         * Package Service Providers...
-         */
-
-        /*
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
@@ -183,6 +179,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // Tenants
+        Tenant\Providers\EventServiceProvider::class,
     ],
 
     /*

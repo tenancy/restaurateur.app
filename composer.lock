@@ -2534,12 +2534,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tenancy/tenancy.git",
-                "reference": "591527f1f4a64b338cea962b0c496594a4fddd39"
+                "reference": "47654c8d9de260b6da19775e6cef408aaed55149"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tenancy/tenancy/zipball/591527f1f4a64b338cea962b0c496594a4fddd39",
-                "reference": "591527f1f4a64b338cea962b0c496594a4fddd39",
+                "url": "https://api.github.com/repos/tenancy/tenancy/zipball/47654c8d9de260b6da19775e6cef408aaed55149",
+                "reference": "47654c8d9de260b6da19775e6cef408aaed55149",
                 "shasum": ""
             },
             "require": {
@@ -2575,9 +2575,12 @@
                         "Tenancy\\Affects\\Cache\\Providers\\ServiceProvider",
                         "Tenancy\\Affects\\Filesystem\\Providers\\ServiceProvider",
                         "Tenancy\\Affects\\Logs\\Providers\\ServiceProvider",
+                        "Tenancy\\Affects\\Routes\\Providers\\ServiceProvider",
+                        "Tenancy\\Affects\\Views\\Providers\\ServiceProvider",
                         "Tenancy\\Identification\\Drivers\\Console\\Providers\\IdentificationProvider",
                         "Tenancy\\Identification\\Drivers\\Environment\\Providers\\IdentificationProvider",
-                        "Tenancy\\Identification\\Drivers\\Http\\Providers\\IdentificationProvider"
+                        "Tenancy\\Identification\\Drivers\\Http\\Providers\\IdentificationProvider",
+                        "Tenancy\\Identification\\Drivers\\Queue\\Providers\\IdentificationProvider"
                     ],
                     "aliases": {
                         "Tenancy": "Tenancy\\Facades\\TenancyFacade"
@@ -2612,7 +2615,7 @@
                 "saas",
                 "tenancy"
             ],
-            "time": "2019-03-29T13:12:11+00:00"
+            "time": "2019-03-29T21:07:23+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
